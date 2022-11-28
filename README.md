@@ -1,8 +1,13 @@
-# Webbutveckling II
-## Projekt uppgift
+# Portfolio in PHP
 
-Projektuppgiften för denna kurs är att skapa en portfolio för mig som webbutvecklare. Webbplatsen kommer visa mina tidigare projekt och uppgifter samt innehålla information om mig och mina kunskaper. 
-Det komemr även finnas en admin del där inlägg, nyheter och så vidare kan postas, ändras och tas bort.
-Projektets huvudfokus är PHP kod men även HTML, CSS samt JavaScript kommer att användas för att skapa en dynamisk webbplats. 
-Webbplatsen är baserad på PHP samt koppling mot databas där samtliga inlägg och användare som loggar in lagras. 
-Av: Jessica Ejelöv 
+by Jessica Ejelöv, jessicaejelov@gmail.com
+
+A school project made with PHP, HTML, JavaScript and CSS.
+The theme of the page is "Developer portfolio"
+
+Functionality: 
+- Admin page that requires password
+- Post content to page thru admin page
+- Email form
+- Upload images to page
+- Database storage 
