@@ -1,0 +1,738 @@
+/* @author Jessica Ejelöv - jeej2100@student.miun.se 
+Project for DT093G at Mid Sweden University*/
+
+
+/* GENERAL STYLING*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    font-size: 1em;
+    color: #f6f3f6;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    min-height: 100vh;
+    padding-top: 5em;
+    position: relative;
+    margin: 0 auto;
+}
+
+.middle {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+}
+
+main {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: .5em;
+    position: relative;
+    display: block;
+}
+
+article {
+    margin: .5em 0;
+    padding: 1em;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+}
+
+section {
+    margin: 0 auto;
+    padding-bottom: 2em;
+    width: 100%;
+    display: block;
+}
+
+.newsshorts {
+    padding: 1em .5em;
+    width: 100%;
+    border-bottom: #5093a8 solid 3px;
+    margin: 0 auto;
+}
+
+picture {
+    position: relative;
+    place-items: center;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 0 auto;
+}
+
+.thumb {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+table {
+    border: #5093a8 solid .2em;
+    border-radius: .5em;
+    padding: .5em;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    font-size: .7em;
+    background-color: #1a252a;
+    margin-top: 1em;
+}
+
+th,
+td {
+    padding: .5em;
+    border-bottom: black solid 1px;
+}
+
+tr:hover {
+    background-color: black;
+}
+
+.logo {
+    place-self: center;
+}
+
+.logo img {
+    height: 4em;
+    place-self: center;
+    margin: 0 auto;
+}
+
+
+/* Text styling with fonts, some sizes and colors */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Bebas Neue', 'Arial';
+    color: black;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 3em;
+    color: #5093a8;
+}
+
+h2 {
+    color: #5093a8;
+    font-size: 2em;
+}
+
+h3 {
+    margin-bottom: .5em;
+    color: #5093a8;
+}
+
+.title {
+    font-size: 2em;
+}
+
+p {
+    padding: .5em 0;
+    line-height: 1.5em;
+}
+
+.indexhead {
+    font-size: 4em;
+    text-align: center;
+}
+
+.mainheading {
+    font-size: 3em;
+    margin-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+}
+
+.title {
+    font-size: 3em;
+    margin-top: .5em;
+}
+
+strong {
+    font-size: 1.5em;
+    color: #b6d0cc;
+}
+
+.content {
+    margin: .5em 0;
+    word-break: normal;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.contentsingle {
+    margin: .5em 0;
+    word-break: break-all;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.logout {
+    color: red;
+    text-decoration: none;
+    text-align: left;
+}
+
+.logout:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.date {
+    font-style: italic;
+    font-size: .8em;
+    text-align: center;
+}
+
+.readmore {
+    margin: .5em;
+    color: #5093a8;
+    font-size: 1.2em;
+    text-align: right;
+}
+
+a {
+    color: #5093a8;
+    font-weight: 700;
+}
+
+a:hover {
+    color: #373f47;
+}
+
+
+/* expand btn */
+
+.btn {
+    background-color: #5093a8;
+    border: none;
+    font-size: 1em;
+    text-align: center;
+    width: 100%;
+    padding: .5em;
+    letter-spacing: .08em;
+    font-size: 2em;
+    font-weight: 700;
+    font-family: 'Bebas Neue', 'Arial';
+}
+
+.navbtn {
+    color: #f6f3f6;
+    padding: .5em;
+    margin: 0;
+    font-size: 2em;
+    font-weight: 700;
+    font-family: 'Bebas Neue', 'Arial';
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    letter-spacing: .08em;
+}
+
+.navbtn:hover {
+    background-color: #5093a8;
+    color: #373f47;
+}
+
+.btnexpand {
+    background-color: #5093a8;
+    border: none;
+    font-size: 1em;
+    text-align: center;
+    width: 100%;
+    padding: .5em;
+}
+
+.expand {
+    display: none;
+}
+
+.skillsgrid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.skillarrow {
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    padding: .5em;
+}
+
+.skills {
+    background-color: #5093a8;
+    font-family: 'Bebas Neue', 'Arial';
+    font-size: 2em;
+    letter-spacing: .08em;
+    padding: .5em;
+}
+
+.skillscontain {
+    background-color: #1a252a;
+    width: 100%;
+    position: relative;
+}
+
+.skillexpand {
+    display: none;
+    background-color: #1a252a;
+    color: #f6f3f6;
+    padding: .5em;
+}
+
+.expandmore {
+    display: none;
+}
+
+
+/* NAVIGATION */
+
+.youarehere {
+    background-color: #5093a8;
+}
+
+.youarehereadmin {
+    color: #f6f3f6;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    height: auto;
+    width: 100%;
+    z-index: 99;
+    background-color: #1a252a;
+    height: 5em;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: .5em;
+    align-items: center;
+}
+
+
+/* Hamburger icon + animation */
+
+.hamburger {
+    position: relative;
+    display: block;
+    width: 33px;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    place-self: center;
+}
+
+.hamburger .bar,
+.hamburger::after,
+.hamburger::before {
+    width: 100%;
+    content: "";
+    display: block;
+    height: 4px;
+    background-color: #f6f3f6;
+    margin: 3px 0px;
+    transition: 0.4s;
+    border-radius: 99px;
+}
+
+
+/* animation of hamburger, rotate 2 bars and hide one */
+
+.hamburger.is-active::before {
+    transform: rotate(-45deg) translate(-2px, 6px);
+}
+
+.hamburger.is-active::after {
+    transform: rotate(45deg) translate(-3px, -8px);
+}
+
+.hamburger.is-active .bar {
+    opacity: 0;
+}
+
+
+/* drop-down part of mobile-nav 
+is out of sight until hamburger is clicked
+placed under the navbar so hamburger is still clickable */
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: 100%;
+    height: 100%;
+    width: 100%;
+    display: block;
+    z-index: 98;
+    background-color: #1a252a;
+    transition: 0.4s;
+    padding-top: 6em;
+    text-align: center;
+}
+
+.mobile-nav.is-active {
+    right: 0;
+}
+
+.mobile-nav a {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 3%;
+    color: #f6f3f6;
+    font-size: 2em;
+    line-height: 1em;
+    font-weight: 700;
+    letter-spacing: .08em;
+    font-family: 'Bebas Neue', 'Arial';
+}
+
+
+/* Hide desktop menu in mobile view */
+
+.menu {
+    display: none;
+}
+
+.navlink {
+    color: #f6f3f6;
+    padding: 1% 3%;
+    font-size: 2em;
+    text-decoration: none;
+    font-weight: 700;
+    place-self: center;
+    font-family: 'Bebas Neue', 'Arial';
+    letter-spacing: .08em;
+}
+
+.menu a:hover,
+.menu a:active {
+    text-decoration: underline;
+    background-color: #5093a8;
+    margin: 0;
+    color: #1a252a;
+    padding: .5em;
+}
+
+
+/* admin menu */
+
+.adminmenu {
+    padding: 0 1em;
+    background-color: #1a252a;
+    color: #f6f3f6;
+    letter-spacing: .08em;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    font-size: .8em;
+    width: 100%;
+}
+
+.adminmenu h2 {
+    text-align: left;
+}
+
+.adminmenu a {
+    padding: 1em 0;
+}
+
+
+/* form */
+
+form {
+    padding: 1em 0em;
+}
+
+.forms {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.postforms {
+    display: grid;
+    grid-template-columns: 100%;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+input,
+textarea {
+    background-color: #f6f3f6;
+    color: #1a252a;
+    padding: 1em;
+    font-weight: 700;
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+.cke_editor {
+    margin-bottom: 1em;
+}
+
+input:focus {
+    background-color: #b6d0cc;
+    color: #1a252a;
+}
+
+.editor-size {
+    margin-bottom: 1em;
+    width: 100%;
+    height: 100%;
+}
+
+input[type="checkbox"] {
+    height: 2em;
+    width: 2em;
+    align-self: center;
+}
+
+input[type="submit"] {
+    background-color: #5093a8;
+    color: #f6f3f6;
+    font-weight: 900;
+    font-size: 3em;
+    font-family: 'Bebas Neue', 'Arial';
+    letter-spacing: .08em;
+    padding: 0;
+    border: #5093a8 1px solid;
+    margin: 0;
+}
+
+input[type="submit"]:hover {
+    background-color: #f6f3f6;
+    color: #5093a8;
+    font-weight: 900;
+}
+
+input[type="submit"]:disabled {
+    background-color: black;
+    color: red;
+    font-weight: 900;
+    border: #5093a8 1px solid;
+}
+
+.GDPR {
+    display: grid;
+    grid-template-columns: 10% 90%;
+}
+
+label {
+    font-weight: 700;
+    margin-bottom: 1.5em;
+    color: #5093a8;
+}
+
+.error {
+    font-weight: 700;
+    font-size: 1em;
+    color: red;
+    text-align: center;
+}
+
+.published {
+    font-weight: 700;
+    font-size: 1em;
+    color: green;
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+}
+
+
+/* footer */
+
+footer {
+    width: 100%;
+    background-color: #373f47;
+    padding-bottom: 1em;
+    display: block;
+}
+
+footer p {
+    color: white;
+    font-size: .8em;
+    text-align: center;
+    padding: .5em;
+}
+
+footer a:hover {
+    color: black;
+}
+
+
+/* media query for 1080px, adds number of colums and adapts the header/nav to desktop version. */
+
+@media (min-width: 1080px) {
+    /* MENU */
+    .mobile-nav {
+        display: none;
+    }
+    .hamburger {
+        display: none;
+    }
+    header {
+        height: 6em;
+        z-index: 99;
+    }
+    nav {
+        display: grid;
+        grid-template-columns: 20% 80%;
+    }
+    .menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        height: 4em;
+    }
+    .navbtn {
+        text-decoration: none;
+    }
+    .middle {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+    main {
+        padding: .5em;
+        margin: 0 auto;
+        position: relative;
+    }
+    article {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+    }
+    section {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+    }
+    table {
+        font-size: 1.5em;
+    }
+    .expandmore {
+        position: fixed;
+        top: 0;
+        right: 0;
+        display: none;
+        z-index: -1;
+        background-color: #1a252a;
+        text-align: center;
+        width: 400px;
+        padding: 6em .5em .5em .5em;
+    }
+    .expandmore li {
+        list-style: none;
+        padding: 1em 0;
+        ;
+    }
+    .expandmore a {
+        color: #f6f3f6;
+        padding: 1% 3%;
+        font-size: 2em;
+        text-decoration: none;
+        font-weight: 700;
+        place-self: center;
+        font-family: 'Bebas Neue', 'Arial';
+        width: 100%;
+        letter-spacing: .08em;
+    }
+    .newsgrid {
+        display: grid;
+        grid-template-columns: 39% 59%;
+        gap: 2%;
+    }
+    .newsgridleft {
+        grid-column: 1;
+        place-self: center;
+    }
+    .newsgridright {
+        grid-column: 2;
+    }
+    .indexhead {
+        font-size: 5.5em;
+    }
+    .mainheading {
+        font-size: 4em;
+        margin-top: 1em;
+        padding-bottom: 1em;
+    }
+    .title {
+        font-size: 3em;
+        text-align: left;
+    }
+    .date {
+        padding-bottom: 2em;
+        text-align: left;
+    }
+    .datecenter {
+        padding-bottom: 2em;
+        text-align: center;
+    }
+    .skillsgrid {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2%;
+    }
+    /* admin menu */
+    .adminmenu {
+        padding: 1em 1em;
+        background-color: #1a252a;
+        color: #f6f3f6;
+        letter-spacing: .08em;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        font-size: 1em;
+    }
+    .adminmenu h2 {
+        text-align: left;
+    }
+    .adminmenu a {
+        padding: 1em 0;
+    }
+}
